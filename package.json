@@ -2,8 +2,10 @@
   "name": "mmes",
   "version": "0.0.1",
   "description": "研究論文用的網站",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
+    "build": "webpack",
+    "dev": "webpack-dev-server --devtool eval --progress --colors --hot --content-base build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,7 +18,23 @@
     "url": "https://github.com/jm555jm/mmes/issues"
   },
   "homepage": "https://github.com/jm555jm/mmes#readme",
-  "dependencies": {
-    "express": "^4.14.0"
+  "dependencies": {},
+  "devDependencies": {
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "express": "^4.14.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "webpack": "^2.2.0",
+    "webpack-dev-middleware": "^1.9.0",
+    "webpack-hot-middleware": "^2.15.0"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "react"
+    ]
   }
 }
